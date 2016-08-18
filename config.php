@@ -642,7 +642,7 @@ $config[2]['plugins'] = [
 					'channels_section' 			  => 103, // Sekcja, gdzie znajdują się kanały prywatne.
 					'foul_language' 		      => ['fuck','shit','PGC24','pgc24','mareczin','ssie','pizda','hitler','cwel','spierdalaj','skurwiel','idiota','dziwka','suka','jebac','kurwa','huj','cipa','chuj','server admin','Support Admin','Manager Admin','Public Admin','Junior Public Admin','Guardian Admin','Admin','.pl','.eu','.com','online-ts3','net-speak'],
 					'freeChannels_name'			  => 'Prywatny Kanał - Wolny', // Nazwa kanałów wolnych
-					'minimal_freeChannels'		  => 100, // Minimalna ilość kanałów wolnych	
+					'minimal_freeChannels'		  => 20, // Minimalna ilość kanałów wolnych	
 				],
 			]
 ];
