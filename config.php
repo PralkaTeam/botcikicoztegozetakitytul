@@ -462,7 +462,12 @@ $config[1]['events'] = [
 							'group' => [337],
 							'cid' => 2855,
 							'name' => 'FAP - Online: [online]'
-						],                      						
+						],     
+                        11 => [
+							'group' => [341],
+							'cid' => 3214,
+							'name' => 'KingZKillaZ - Online: [online]'
+						],						
 					],
 				],
 				
@@ -910,7 +915,7 @@ $config[3]['events'] = [
 					- 'groups' - tutaj wpisujemy id kanału = id rangi, którą ma nadać,
 					- 'all_groups' - tutaj wpisujemy id wszystkich grup.
 				*/
-					'onClientAreOnChannel' => [393,395,608,2411,2112,2175,2743,2796,2815,2852], 
+					'onClientAreOnChannel' => [393,395,608,2411,2112,2175,2743,2796,2815,2852,3210], 
 						'groups' => [
 							393 => [32], //vip1
 							395 => [79], //vip2
@@ -922,8 +927,9 @@ $config[3]['events'] = [
 							2796 => [335], //premium4
                             2815 => [336], //premium5
 							2852 => [337], //premium6
+							3210 => [341], //premium7
 						],
-					'all_groups' => [32,79,204,307,309,315,324,335,336,337],
+					'all_groups' => [32,79,204,307,309,315,324,335,336,337,341],
 				],
 
 				'vipGroupRemove' => [
@@ -935,7 +941,7 @@ $config[3]['events'] = [
 					- 'groups' - tutaj wpisujemy id kanału = id rangi, którą ma nadać,
 					- 'all_groups' - tutaj wpisujemy id wszystkich grup.
 				*/
-					'onClientAreOnChannel' => [394,396,609,2412,2113,2176,2744,2797,2816,2853], 
+					'onClientAreOnChannel' => [394,396,609,2412,2113,2176,2744,2797,2816,2853,3212], 
 						'groups' => [
 							394 => [32], //vip1
 							396 => [79], //vip2
@@ -946,9 +952,10 @@ $config[3]['events'] = [
 							2744 => [324], //premium3
 							2797 => [335], //premium4
                             2816 => [336], //premium5	
-                            2853 => [337], //premium6									
+                            2853 => [337], //premium6
+                            3212 => [341], //premium7							
 						],
-					'all_groups' => [32,79,204,307,309,315,324,335,336,337],
+					'all_groups' => [32,79,204,307,309,315,324,335,336,337,341],
 				],
 				
 				'userPlatform' => [
