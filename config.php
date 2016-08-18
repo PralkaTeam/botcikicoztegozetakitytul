@@ -222,7 +222,7 @@ $config[1]['events'] = [
          * @format 'simpleEvent'
          */
 	
-			'ignored_events' => ['channelMessage', 'adminsOnlineeng', 'poke_adminseng'],
+			'ignored_events' => ['channelMessage'],
 
 		/**
          * @name Specyfic events time configuration
@@ -237,8 +237,6 @@ $config[1]['events'] = [
 				'adminsOnline' => ['seconds' => 5,'minutes' => 2,'hours' => 0,'days' => 0],
 				
 				'eliteOnline' => ['seconds' => 5,'minutes' => 2,'hours' => 0,'days' => 0],				
-				
-				'adminsOnlineeng' => ['seconds' => 5,'minutes' => 2,'hours' => 0,'days' => 0],
 				
 				'groupOnline'=> ['seconds' => 15,'minutes' => 0,'hours' => 0,'days' => 0],
 				
@@ -255,8 +253,6 @@ $config[1]['events'] = [
 				'topoftheweek' => ['seconds' => 0, 'minutes' => 3, 'hours' => 0, 'days' => 0],
 				
 				'poke_admins' => ['seconds' => 15, 'minutes' => 0, 'hours' => 0, 'days' => 0],
-				
-				'poke_adminseng' => ['seconds' => 15, 'minutes' => 0, 'hours' => 0, 'days' => 0],
 				
 				'multiFunction' => ['seconds' => 30, 'minutes' => 0, 'hours' => 0, 'days' => 0],
 				
@@ -403,13 +399,6 @@ $config[1]['events'] = [
 					'channel' => 2395, // Kanał gdzie ma wypisywać
 				],
 				
-				'adminsOnlineeng' => [
-					'write_channel' => 1026, // Kanał gdzie ma wpisywać
-					'channel_name' => '● Admins Online: [admins]', // Nazwa kanału
-					'up_description' => '\n [center][size=11][b]Status Administration[/size][/center]\n\n',
-					'groups' => [302,218,219,220,221] // Grupy administracji
-				],
-				
 				'groupOnline' => [
 					'up_description' => '\n [center][size=11][b]Strefa VIP[/center]\n\n',
 					'clans' => [
@@ -486,16 +475,6 @@ $config[1]['events'] = [
                     ],
 					'ignored_channel' => [], // Ignorowane kanały, jeżeli będzie tam admin nie dostanie poke.
 					'groups' => [287,301,317,35,37,38], // Rangi, które mają dostawać poke, wpisujemy wszystkie
-                ],
-				
-				'poke_adminseng' => [
-					'type' => 'poke', // Dostępne typy: poke/pw
-                    'onClientAreOnChannel' => [1025], // Lista kanałów pomocy
-                    'groups_poke' => [
-                        1025 => [302,218,219,220,221], // Kanał = grupy, które ma poketować.
-                    ],
-					'ignored_channel' => [], // Ignorowane kanały, jeżeli będzie tam admin nie dostanie poke.
-					'groups' => [302,218,219,220,221], // Rangi, które mają dostawać poke, wpisujemy wszystkie
                 ],
 				
 				'multiFunction' => [
@@ -845,7 +824,7 @@ $config[3]['events'] = [
          * @format 'simpleEvent'
          */
 		
-			'ignored_events' => ['musicChannel', 'clientLevels', 'musicSinus', 'musicInformation', 'freeChannelseng', 'randomGroup'],
+			'ignored_events' => ['musicChannel', 'clientLevels', 'musicSinus', 'musicInformation', 'randomGroup'],
 		
 		
 		/**
@@ -871,8 +850,6 @@ $config[3]['events'] = [
 				'getChannel' => ['seconds' => 10,'minutes' => 0,'hours' => 0,'days' => 0],
 				
 				'freeChannels' => ['seconds' => 1,'minutes' => 6,'hours' => 0,'days' => 0],
-				
-				'freeChannelseng' => ['seconds' => 1,'minutes' => 6,'hours' => 0,'days' => 0],
 				
 				'userPlatform' => ['seconds' => 35,'minutes' => 0,'hours' => 0,'days' => 0],
 				
@@ -998,25 +975,13 @@ $config[3]['events'] = [
 					'top_desc' => '[size=12][b]Kanały dostępne:[/b] ',
 					'end_desc' => '[/size]\n[hr][right][size=9]Wygenerowane przez: [b][url=http://K-Scripts.eu/?teamspeak]MBOT (Wersja: 24.0)[/url][/right]',
 				],
-
-				'freeChannelseng' => [
-				/*
-					freeChannels - Darmowe kanały, wpisuje tutaj wolne kanały jak i te, które zostaną usunięte danego dnia.
-				*/
-					'channel_pid' => 103, // Sekcja kanałów prywatnych
-					'write_channel' => 1062, // Kanał gdzie ma wpisywać opis.
-					'channel_id2' => 1062, // Kanał gdzie ma wpisywać nazwę
-					'channel_name' => '● Free channels: [freeChannels]', // Nazwa kanału
-					'top_desc' => '[size=12][b]Channels Available:[/b] ',
-					'end_desc' => '[/size]\n[hr][right][size=9]Wygenerowane przez: [b][url=http://K-Scripts.eu/?teamspeak]MBOT (Wersja: 24.0)[/url][/right]',
-				],
 				
 				'getChannel' => [
 				/*
 					getChannel - automatyczne nadawanie kanału po wejściu na określony kanał.
 				*/
 					'channels_section' => 103, // Sekcja kanałów prywatnych
-					'need_groups' => [23,24,215,216], // Potrzebne grupy do otrzymania kanału
+					'need_groups' => [23,24], // Potrzebne grupy do otrzymania kanału
 					'channel_num_regex' => '/(.*)\.(.*)/', // regex nazwy kanału
 					'channel_admin_group_id' => 14, // ID grupy, która ma nadać
 					'pl_groups' => array(23, 24), // Potrzebne grupy do otrzymania kanału
@@ -1024,7 +989,7 @@ $config[3]['events'] = [
 					'max_subchannels' => 3, // Maksymalna ilość podkanałów
 					'channel_codec' => 4,
 					'channel_codec_level' => 10,
-					'onClientAreOnChannel' => [27,1028], // ID kanału, gdy na niego wejdziemy otrzymamy kanał.
+					'onClientAreOnChannel' => [27], // ID kanału, gdy na niego wejdziemy otrzymamy kanał.
 				],
 				
 				'clientLevels' => [
